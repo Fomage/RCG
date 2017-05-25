@@ -204,6 +204,10 @@ Other
 	Dovahkiin
 	Corvo
 	Frankeinstein's creature
+	Rayman
+	The Kid
+	Rambo
+	
 
 Overwatch
 	Genji
@@ -279,6 +283,11 @@ Terminator
 	T-800
 	T-1000
 	TX
+
+Warcraft 3
+	Thrall
+	Illidan
+	Arthas
 
 Zelda
 	Link
