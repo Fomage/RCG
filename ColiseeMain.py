@@ -21,11 +21,11 @@ class Character:
 	- alreadyPicked: boolean
 	"""
 	currentCharacterId = 0
-	
+
 	def __init__(self, ID, name, creator, source, world, powerLevel, tags):
 		"""default empty initialization"""
 		Character.currentCharacterId +=1
-		
+
 		self.ID = ID
 		self.name = name
 		self.creator = creator
@@ -33,9 +33,9 @@ class Character:
 		self.world = world
 		self.powerLevel = powerLevel
 		self.tags = tags
-		
+
 		self.alreadyPicked = False
-		
+
 	def hasBeenPicked(self):
 		return self.alreadyPicked
 
@@ -49,21 +49,20 @@ class Player:
 	"""
 	currentPlayerId = 0
 	defaultCharacterSublist = []
-	def __init__(self, characterSublist, **options):
+	def __init__(self, characterSublist = None, **options):
 		self.ID = Player.currentPlayerId
-
-		if Player.currentPlayerId == 0:
-			Player.defaultCharacterSublist = characterSublist
-
 		Player.currentPlayerId +=1
+
+		if(characterSublist == None):
+			characterSublist = self.defaultCharacterSublist
 
 		self.character = random.choice([character for character in characterSublist if not character.hasBeenPicked()])
 		self.character.pick()
 
 		print ("Player {} : {}".format(self.ID, self.character.name))
 
-	def repick(self, persoSubList = []):
-		if persoSubList == []:
+	def repick(self, persoSubList = None):
+		if persoSubList == None:
 			persoSubList = Player.defaultCharacterSublist
 
 		self.character = random.choice([perso for perso in persoSubList if not perso.hasBeenPicked()])
@@ -92,7 +91,7 @@ for i, line in enumerate(content):
 	tags = line[6:]
 	content[i] = line[:6] + [tags]
 for line in content:
-	characterList = characterList + [Character(*line)]
+	characterList.append(Character(*line))
 
 charactersFile.close()
 
@@ -147,8 +146,9 @@ def modesEnum(modeName):
 gameMode = input("Choose gamemode:\n0:default\n1:tagged\n2:world\n3:power")
 
 nbPlayers = int(input("How many Players?"))
-Players = []
 
+Player.defaultCharacterSublist = characterList
+Players = []
 for i in range(0, nbPlayers):
 	Players.append(Player(characterList))
 
@@ -158,8 +158,7 @@ while str(repickAnswer) != "no":
 	for p in Players :
 		print(p)
 	repickAnswer = input("Repick ? ")
-	
-		
+
 
 
 
