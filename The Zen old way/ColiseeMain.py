@@ -71,6 +71,9 @@ class Player:
 
 		print ("Player {}'s character changed to {}.\n".format(self.ID, self.character.name))
 
+	def __str__(self):
+		return "Player {} : {}".format(self.ID, self.character.name)
+
 #--------INIT--------------
 characterList = []
 # Load every Characters :
@@ -149,14 +152,12 @@ Players = []
 for i in range(0, nbPlayers):
 	Players.append(Player(characterList))
 
-print("\nRepick ? ")
-repickAnswer = input()
-while repickAnswer != "no":
+repickAnswer = input("Repick ? ")
+while str(repickAnswer) != "no":
 	Players[int(repickAnswer)].repick()
-	for j in Players :
-		print("Player {} : {} ".format(j.IDj, j.Character.name))
-	print("\nRepick ? ")
-	repickAnswer = input()
+	for p in Players :
+		print(p)
+	repickAnswer = input("Repick ? ")
 	
 		
 
