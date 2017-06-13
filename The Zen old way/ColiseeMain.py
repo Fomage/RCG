@@ -9,165 +9,155 @@ import random
 
 #-------Class definitions--------
 
-class Personnage:
-	"""Un personnage est caractérisé par :
-	- son ID : un entier unique
-	- son nom : une chaîne
-	- son créateur
-	- son oeuvre
-	- son univers
-	- son facteur de puissance
-	- des tags
-	- un booleen, alreadyPicked, qui indique si le personnage a déjà été tiré auparavant
+class Character:
+	"""Character's attributes:
+	- ID: unique integer
+	- name: string
+	- creator: string
+	- source: string, the book/movie/other work from which the character is extracted
+	- world: string
+	- powerLevel: integer
+	- tags: array[string]
+	- alreadyPicked: boolean
 	"""
-	personnagesCrees = 0
+	currentCharacterId = 0
 	
-	def __init__(self, ID, nom, createur, oeuvre, univers, facteurDePuissance, tags):
+	def __init__(self, ID, name, creator, source, world, powerLevel, tags):
 		"""default empty initialization"""
-		Personnage.personnagesCrees +=1
+		Character.currentCharacterId +=1
 		
 		self.ID = ID
-		self.nom = nom
-		self.createur = createur
-		self.oeuvre = oeuvre
-		self.univers = univers
-		self.facteurDePuissance = facteurDePuissance
+		self.name = name
+		self.creator = creator
+		self.source = source
+		self.world = world
+		self.powerLevel = powerLevel
 		self.tags = tags
 		
 		self.alreadyPicked = False
 		
 	def hasBeenPicked(self):
 		return self.alreadyPicked
-	
-	
+
 	def pick(self):
 		self.alreadyPicked = True
 
-	
-		
-
-
-class Joueur:
-	"""Un joueur possède :
-	- un IDj
-	- un personnage
+class Player:
+	"""Player's attributes:
+	- ID: unique integer
+	- character: Character
 	"""
-	currentIDj = 0
-	persoDefaultSubList = []
-	def __init__(self, persoSubList, **options):
-		self.IDj = Joueur.currentIDj
-		
-		if Joueur.currentIDj == 0:
-			Joueur.persoDefaultSubList = persoSubList #On met à jour la liste de personnages par défaut
-		
-		Joueur.currentIDj +=1
-		
-		self.personnage = random.choice([perso for perso in persoSubList if not perso.hasBeenPicked()])
-		self.personnage.pick()
-		
+	currentPlayerId = 0
+	defaultCharacterSublist = []
+	def __init__(self, characterSublist, **options):
+		self.ID = Player.currentPlayerId
 
+		if Player.currentPlayerId == 0:
+			Player.defaultCharacterSublist = characterSublist
 
-		print ("Joueur {} : {}".format(self.IDj, self.personnage.nom))
-		
+		Player.currentPlayerId +=1
+
+		self.character = random.choice([character for character in characterSublist if not character.hasBeenPicked()])
+		self.character.pick()
+
+		print ("Player {} : {}".format(self.ID, self.character.name))
+
 	def repick(self, persoSubList = []):
 		if persoSubList == []:
-			persoSubList = Joueur.persoDefaultSubList
-		
-		self.personnage = random.choice([perso for perso in persoSubList if not perso.hasBeenPicked()])
-		self.personnage.pick()
-		
-		print ("Joueur {} a chang� de personnage. Il a maintenant {}.\n".format(self.IDj, self.personnage.nom))
-		
+			persoSubList = Player.defaultCharacterSublist
+
+		self.character = random.choice([perso for perso in persoSubList if not perso.hasBeenPicked()])
+		self.character.pick()
+
+		print ("Player {}'s character changed to {}.\n".format(self.ID, self.character.name))
 
 #--------INIT--------------
-persoList = []
-# On charge tous les personnages :
+characterList = []
+# Load every Characters :
 
+charactersFile = open("characters.csv", "r")
+content = charactersFile.read()
+content = content.replace(";;", ";")
+content = content.replace(";\n", "\n")
+content = content.split("\n")
+content = [line.split(";") for line in content[1:-1]]
+for line in content:
+	if line[-1] == '':
+		del line[-1]
+# Rebuild tag list
+for i, line in enumerate(content):
+	tags = line[6:]
+	content[i] = line[:6] + [tags]
+for line in content:
+	characterList = characterList + [Character(*line)]
 
-fichierPersonnages = open("personnages.csv", "r")
-contenu = fichierPersonnages.read()
-contenu = contenu.replace(";;", ";")
-contenu = contenu.replace(";\n", "\n")
-contenu = contenu.split("\n")
-contenu = [ligne.split(";") for ligne in contenu[1:-1]]
-for ligne in contenu:
-        if ligne[-1] == '':
-                del ligne[-1]
-# On reconstitue la liste des tags
-for i, ligne in enumerate(contenu):
-        tags = ligne[6:]
-        contenu[i] = ligne[:6] + [tags]
-for ligne in contenu:
-	persoList = persoList + [Personnage(*ligne)]
+charactersFile.close()
 
+# Character selection by tag
 
-fichierPersonnages.close()
-
-#Sélection par tags
-
-def restrictPersoListSingleTag(persoListToRestrict, tag):
+def restrictCharacterListByTag(characterListToRestrict, tag):
 	result = []
-	for perso in persoListToRestrict:
-		if tag in perso.tags:
-			result = result + [perso]
+	for character in characterListToRestrict:
+		if tag in character.tags:
+			result.append(character)
 	return result
 
-def restrictPersoListWithTags(persoListToRestrict, tags):
+def restrictCharacterListByTags(characterListToRestrict, tags):
 	for tag in tags:
-		persoListToRestrict = restrictPersoListSingleTag(persoListToRestrict, tag)
-	return persoListToRestrict
+		characterListToRestrict = restrictCharacterListByTag(characterListToRestrict, tag)
+	return characterListToRestrict
 	
 #-------TESTS-------------
 
-#Test restrictPersoListSingleTag
+#Test restrictCharacterListByTag
 '''
-testList = restrictPersoListSingleTag(persoList, "Fantasy")
+testList = restrictCharacterListByTag(characterList, "Fantasy")
 i = 0
 for perso in testList :
 	i+=1
-	print (perso.nom + "\n")
+	print (perso.name + "\n")
 	for tag in perso.tags :
 		print ("\t" + tag + "\n")
 print (i)
 '''
 '''
 #Test restrictListWithTags
-testList = restrictPersoListWithTags(persoList, ["Fantasy", "Badass"])
+testList = restrictCharacterListByTags(characterList, ["Fantasy", "Badass"])
 i = 0
 for perso in testList :
 	i+=1
-	print (perso.nom + "\n")
+	print (perso.name + "\n")
 	for tag in perso.tags :
 		print ("\t" + tag + "\n")
 print (i)
 '''
 
 #-------Mode Selector----
-'''Quid de mettre un dictionnaire qui renvoie des procédures en sortie, procédures qui lancent le type de partie sélectionnée ?'''
+# Quid de mettre un dictionnaire qui renvoie des procedures en sortie, procedures qui lancent le type de partie selectionnee ?
 '''
 def modesEnum(modeName):
 	return {
 	'': ,}
 '''
-	
+
 #-------Play Module-------
-gameMode = input("Choisissez un mode de jeu : default, tagged, universe, power")
+gameMode = input("Choose gamemode:\n0:default\n1:tagged\n2:world\n3:power")
 
-nbJoueurs = int(input("Combien de joueurs : "))
-joueurs = []
+nbPlayers = int(input("How many Players?"))
+Players = []
 
-for i in range(0, nbJoueurs):
-	joueurs = joueurs + [Joueur(persoList)]
+for i in range(0, nbPlayers):
+	Players.append(Player(characterList))
 
 print("\nRepick ? ")
 repickAnswer = input()
 while repickAnswer != "no":
-        joueurs[int(repickAnswer)].repick()
-        for j in joueurs :
-                print("Joueur {} : {} ".format(j.IDj, j.personnage.nom))
-        print("\nRepick ? ")
-        repickAnswer = input()
-        
+	Players[int(repickAnswer)].repick()
+	for j in Players :
+		print("Player {} : {} ".format(j.IDj, j.Character.name))
+	print("\nRepick ? ")
+	repickAnswer = input()
+	
 		
 
 
