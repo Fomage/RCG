@@ -1,18 +1,18 @@
-ID;Nom;Créateur;Œuvre;Univers;Facteur de puissance;Tags;;
+ID;Name;Creator;Source;World;Power Level;Tags;
 1;Edwin Til'Illan;Bottero;Ewilan;Ewilan;0;Fantasy;Badass;
-2;Ewilan;Bottero;Ewilan;Ewilan;0;Fantasy;Mental;Désarmé
+2;Ewilan;Bottero;Ewilan;Ewilan;0;Fantasy;Mental;Desarme
 3;Salim;Bottero;Ewilan;Ewilan;0;Fantasy;Inconnu;
 4;Ellana;Bottero;Ewilan;Ewilan;0;Fantasy;default;
 5;Bjorn;Bottero;Ewilan;Ewilan;0;Fantasy;Inconnu;
 6;Maniel;Bottero;Ewilan;Ewilan;0;Fantasy;Inconnu;
-7;Sayanel;Bottero;Ewilan;Ewilan;0;Fantasy;Inconnu;
+7;Sayanel;Bottero;Ewilan;Ewilan;0;Fanta;Inconnu;
 8;Jilano;Bottero;Ewilan;Ewilan;0;Fantasy;Inconnu;
 9;Amhour;Bottero;Ewilan;Ewilan;0;Fantasy;Inconnu;
 10;Chiam Vite;Bottero;Ewilan;Ewilan;0;Fantasy;Inconnu;
 11;Siam;Bottero;Ewilan;Ewilan;0;Fantasy;Inconnu;
-12;Merwin;Bottero;Ewilan;Ewilan;0;Fantasy;Inconnu;Désarmé
+12;Merwin;Bottero;Ewilan;Ewilan;0;Fantasy;Inconnu;Desarme
 13;Riburn Alquin;Bottero;Ewilan;Ewilan;0;Fantasy;Inconnu;Troll
-14;Illian;Bottero;Ewilan;Ewilan;0;Fantasy;Inconnu;Désarmé
+14;Illian;Bottero;Ewilan;Ewilan;0;Fantasy;Inconnu;Desarme
 15;Hurj Ingan;Bottero;Ellana;Ewilan;0;Fantasy;default;
 16;Rous Ingan;Bottero;Ellana;Ewilan;0;Fantasy;default;
 17;Ankil Thuirn;Bottero;Ellana;Ewilan;0;Fantasy;default;
@@ -21,11 +21,11 @@ ID;Nom;Créateur;Œuvre;Univers;Facteur de puissance;Tags;;
 20;Doudou;Bottero;Ellana;Ewilan;0;Fantasy;default;
 21;Seigneur Kharx;Bottero;Ellana;Ewilan;0;Fantasy;default;
 22;Nathan;Bottero;L'Autre;Ewilan;0;Fantastique;default;
-23;Shaé;Bottero;L'Autre;Ewilan;0;Fantastique;default;
+23;Shae;Bottero;L'Autre;Ewilan;0;Fantastique;default;
 24;Elio;Bottero;L'Autre;Ewilan;0;Fantasy;default;
 25;Eryn;Bottero;L'Autre;Ewilan;0;Fantasy;default;
 26;Jaalab;Bottero;L'Autre;Ewilan;0;Fantastique;default;
-27;Onjü;Bottero;L'Autre;Ewilan;0;Fantastique;default;
+27;Onju;Bottero;L'Autre;Ewilan;0;Fantastique;default;
 28;Ombe;Bottero;A Comme Association;A Comme Association;0;Fantastique;default;
 29;Jasper;L'Homme;A Comme Association;A Comme Association;0;Fantastique;default;
 30;Erg Machaon;Damasio;La Horde du Contrevent;La Horde du Contrevent;0;Fantasy;default;
@@ -37,12 +37,12 @@ ID;Nom;Créateur;Œuvre;Univers;Facteur de puissance;Tags;;
 36;Bobba Fett;Georges Lucas;Star Wars;Star Wars;0;Science Fiction;default;
 37;Dark Vador;Georges Lucas;Star Wars;Star Wars;0;Science Fiction;default;
 38;Dark Sidious;Georges Lucas;Star Wars;Star Wars;0;Science Fiction;default;
-39;Maître Yoda;Georges Lucas;Star Wars;Star Wars;0;Science Fiction;default;
+39;Master Yoda;Georges Lucas;Star Wars;Star Wars;0;Science Fiction;default;
 40;Chewbacca;Georges Lucas;;Star Wars;0;Science Fiction;default;
-41;Jack Sparrow;Disney;Pirate des Caraïbes;Pirate des Caraïbes;0;default;default;
-42;Barbossa;Disney;Pirate des Caraïbes;Pirate des Caraïbes;0;default;default;
-43;Davy Johnes;Disney;Pirate des Caraïbes;Pirate des Caraïbes;0;default;default;
-44;Calypso;Disney;Pirate des Caraïbes;Pirate des Caraïbes;0;default;default;
+41;Jack Sparrow;Disney;Pirate des Caraibes;Pirate des Caraibes;0;default;default;
+42;Barbossa;Disney;Pirate des Caraibes;Pirate des Caraibes;0;default;default;
+43;Davy Johnes;Disney;Pirate des Caraibes;Pirate des Caraibes;0;default;default;
+44;Calypso;Disney;Pirate des Caraibes;Pirate des Caraibes;0;default;default;
 45;Naruto;Kishimoto;Naruto;Naruto;0;default;default;
 46;Sasuke;Kishimoto;Naruto;Naruto;0;default;default;
 47;Kakashi;Kishimoto;Naruto;Naruto;0;default;default;
@@ -77,5 +77,5 @@ ID;Nom;Créateur;Œuvre;Univers;Facteur de puissance;Tags;;
 76;Wrath;Arakawa;Fullmetal Alchemist;Fullmetal Alchemist;0;default;default;
 77;Gluttony;Arakawa;Fullmetal Alchemist;Fullmetal Alchemist;0;default;default;
 78;Lust;Arakawa;Fullmetal Alchemist;Fullmetal Alchemist;0;default;default;
-79;Hadès;Religions;Mythologie grecque;Mythologie grecque;0;default;default;
-80;Poséidon;Religions;Mythologie grecque;Mythologie grecque;0;default;default;
+79;Hades;Religions;Mythologie grecque;Mythologie grecque;0;default;default;
+80;Poseidon;Religions;Mythologie grecque;Mythologie grecque;0;default;default;

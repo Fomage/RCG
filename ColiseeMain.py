@@ -39,8 +39,8 @@ class Character:
 	def hasBeenPicked(self):
 		return self.alreadyPicked
 
-	def pick(self):
-		self.alreadyPicked = True
+	def pick(self, b = True):
+		self.alreadyPicked = b
 
 class Player:
 	"""Player's attributes:
@@ -59,7 +59,7 @@ class Player:
 		self.character = random.choice([character for character in characterSublist if not character.hasBeenPicked()])
 		self.character.pick()
 
-		print ("Player {} : {}".format(self.ID, self.character.name))
+		print(self)
 
 	def repick(self, persoSubList = None):
 		if persoSubList == None:
@@ -68,32 +68,41 @@ class Player:
 		self.character = random.choice([perso for perso in persoSubList if not perso.hasBeenPicked()])
 		self.character.pick()
 
-		print ("Player {}'s character changed to {}.\n".format(self.ID, self.character.name))
+		print ("Player {}'s character changed to {}.".format(self.ID, self.character.name))
 
 	def __str__(self):
-		return "Player {} : {}".format(self.ID, self.character.name)
+		res = "Player {} : {} ({})".format(self.ID, self.character.name, self.character.source)
+		if not res:
+			print(self.character)
+		return res
 
 #--------INIT--------------
 characterList = []
 # Load every Characters :
 
-charactersFile = open("characters.csv", "r")
-content = charactersFile.read()
-content = content.replace(";;", ";")
-content = content.replace(";\n", "\n")
-content = content.split("\n")
-content = [line.split(";") for line in content[1:-1]]
-for line in content:
-	if line[-1] == '':
-		del line[-1]
-# Rebuild tag list
-for i, line in enumerate(content):
-	tags = line[6:]
-	content[i] = line[:6] + [tags]
-for line in content:
-	characterList.append(Character(*line))
+with open("characters.csv") as charactersFile:
+	content = charactersFile.read()
+	content = content.replace(";;", ";")
+	content = content.replace(";\n", "\n")
+	content = content.split("\n")
+	content = [line.split(";") for line in content[1:-1]]
+	for line in content:
+		if line[-1] == '':
+			del line[-1]
+	# Rebuild tag list
+	for i, line in enumerate(content):
+		tags = line[6:]
+		content[i] = line[:6] + [tags]
+	for line in content:
+		characterList.append(Character(*line))
 
-charactersFile.close()
+#--------FUNCTIONS--------------
+
+# Reset character list
+
+def resetCharacterList(characterList):
+	for character in characterList:
+		character.pick(False)
 
 # Character selection by tag
 
@@ -143,21 +152,41 @@ def modesEnum(modeName):
 '''
 
 #-------Play Module-------
-gameMode = input("Choose gamemode:\n0:default\n1:tagged\n2:world\n3:power")
+# input constants
+no = "no"
 
-nbPlayers = int(input("How many Players?"))
 
+# gameMode = input("Choose gamemode:\n0:default\n1:tagged\n2:world\n3:power")
+
+# Character list selection
 Player.defaultCharacterSublist = characterList
-Players = []
-for i in range(0, nbPlayers):
-	Players.append(Player(characterList))
 
-repickAnswer = input("Repick ? ")
-while str(repickAnswer) != "no":
-	Players[int(repickAnswer)].repick()
-	for p in Players :
-		print(p)
+while True:
+	# character list reset
+	resetCharacterList(characterList)
+
+	# Player number selection
+	nbPlayers = int(input("How many Players?"))
+	players = []
+	Player.currentPlayerId = 0
+	for i in range(0, nbPlayers):
+		players.append(Player(characterList))
+
+	# Repicks
 	repickAnswer = input("Repick ? ")
+	while repickAnswer != no:
+		if int(repickAnswer) < 0: # repick all
+			resetCharacterList(characterList)
+			for p in players:
+				p.repick()
+			for p in players:
+				print(p)
+		else: # repick one
+			repickAnswer = int(repickAnswer) % len(players)
+			players[repickAnswer].repick()
+			for p in players :
+				print(p)
+		repickAnswer = input("Repick ? ")
 
 
 
