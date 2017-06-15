@@ -207,7 +207,6 @@ Other
 	Rayman
 	The Kid
 	Rambo
-	
 
 Overwatch
 	Genji
