@@ -22,11 +22,11 @@ class Character:
 	"""
 	currentCharacterId = 0
 
-	def __init__(self, ID, name, creator, source, world, powerLevel, tags):
+	def __init__(self, name, creator, source, world, powerLevel, tags):
 		"""default empty initialization"""
 		Character.currentCharacterId +=1
 
-		self.ID = ID
+		self.ID = Character.currentCharacterId
 		self.name = name
 		self.creator = creator
 		self.source = source
@@ -91,9 +91,10 @@ with open("characters.csv") as charactersFile:
 			del line[-1]
 	# Rebuild tag list
 	for i, line in enumerate(content):
-		tags = line[6:]
-		content[i] = line[:6] + [tags]
+		tags = line[5:]
+		content[i] = line[:5] + [tags]
 	for line in content:
+		print line
 		characterList.append(Character(*line))
 
 #--------FUNCTIONS--------------
