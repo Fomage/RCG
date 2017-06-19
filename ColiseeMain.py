@@ -6,6 +6,8 @@ import os
 
 import random
 
+import csv
+
 
 #-------Class definitions--------
 
@@ -80,22 +82,21 @@ class Player:
 characterList = []
 # Load every Characters :
 
-with open("characters.csv") as charactersFile:
-	content = charactersFile.read()
-	content = content.replace(";;", ";")
-	content = content.replace(";\n", "\n")
-	content = content.split("\n")
-	content = [line.split(";") for line in content[1:-1]]
-	for line in content:
-		if line[-1] == '':
-			del line[-1]
-	# Rebuild tag list
-	for i, line in enumerate(content):
-		tags = line[5:]
-		content[i] = line[:5] + [tags]
-	for line in content:
-		print line
-		characterList.append(Character(*line))
+with open("characters.csv") as charactersCsvFile:
+	characterReader = csv.reader(charactersCsvFile)
+	firstRow = True
+	for row in characterReader:
+		print row
+		if firstRow:
+			firstRow = False
+		else:
+			if(len(row) > 5):
+				row[5] = row[5:]
+			else:
+				while len(row) <= 5:
+					row.append(None)
+			characterList.append(Character(*row))
+	print len(characterList)
 
 #--------FUNCTIONS--------------
 

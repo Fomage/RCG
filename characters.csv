@@ -1,81 +1,225 @@
-Name;Creator;Source;World;Power Level;Tags;
-Edwin Til'Illan;Bottero;Ewilan;Ewilan;0;Fantasy;Badass;
-Ewilan;Bottero;Ewilan;Ewilan;0;Fantasy;Mental;Desarme
-Salim;Bottero;Ewilan;Ewilan;0;Fantasy;Inconnu;
-Ellana;Bottero;Ewilan;Ewilan;0;Fantasy;default;
-Bjorn;Bottero;Ewilan;Ewilan;0;Fantasy;Inconnu;
-Maniel;Bottero;Ewilan;Ewilan;0;Fantasy;Inconnu;
-Sayanel;Bottero;Ewilan;Ewilan;0;Fanta;Inconnu;
-Jilano;Bottero;Ewilan;Ewilan;0;Fantasy;Inconnu;
-Amhour;Bottero;Ewilan;Ewilan;0;Fantasy;Inconnu;
-Chiam Vite;Bottero;Ewilan;Ewilan;0;Fantasy;Inconnu;
-Siam;Bottero;Ewilan;Ewilan;0;Fantasy;Inconnu;
-Merwin;Bottero;Ewilan;Ewilan;0;Fantasy;Inconnu;Desarme
-Riburn Alquin;Bottero;Ewilan;Ewilan;0;Fantasy;Inconnu;Troll
-Illian;Bottero;Ewilan;Ewilan;0;Fantasy;Inconnu;Desarme
-Hurj Ingan;Bottero;Ellana;Ewilan;0;Fantasy;default;
-Rous Ingan;Bottero;Ellana;Ewilan;0;Fantasy;default;
-Ankil Thuirn;Bottero;Ellana;Ewilan;0;Fantasy;default;
-Essindra;Bottero;Ellana;Ewilan;0;Fantasy;default;
-Nillem;Bottero;Ellana;Ewilan;0;Fantasy;default;
-Doudou;Bottero;Ellana;Ewilan;0;Fantasy;default;
-Seigneur Kharx;Bottero;Ellana;Ewilan;0;Fantasy;default;
-Nathan;Bottero;L'Autre;Ewilan;0;Fantastique;default;
-Shae;Bottero;L'Autre;Ewilan;0;Fantastique;default;
-Elio;Bottero;L'Autre;Ewilan;0;Fantasy;default;
-Eryn;Bottero;L'Autre;Ewilan;0;Fantasy;default;
-Jaalab;Bottero;L'Autre;Ewilan;0;Fantastique;default;
-Onju;Bottero;L'Autre;Ewilan;0;Fantastique;default;
-Ombe;Bottero;A Comme Association;A Comme Association;0;Fantastique;default;
-Jasper;L'Homme;A Comme Association;A Comme Association;0;Fantastique;default;
-Erg Machaon;Damasio;La Horde du Contrevent;La Horde du Contrevent;0;Fantasy;default;
-Speaker Gendibal;Asimov;Fondation;Fondation;0;Science Fiction;default;
-King Kong;Film;King Kong;IRL;0;Fantastique;default;
-V;Film;V for Vendetta;IRL;0;Fantastique;default;
-Obi-One Kenoby;Georges Lucas;Star Wars;Star Wars;0;Science Fiction;default;
-Han Solo;Georges Lucas;Star Wars;Star Wars;0;Science Fiction;default;
-Bobba Fett;Georges Lucas;Star Wars;Star Wars;0;Science Fiction;default;
-Dark Vador;Georges Lucas;Star Wars;Star Wars;0;Science Fiction;default;
-Dark Sidious;Georges Lucas;Star Wars;Star Wars;0;Science Fiction;default;
-Master Yoda;Georges Lucas;Star Wars;Star Wars;0;Science Fiction;default;
-Chewbacca;Georges Lucas;;Star Wars;0;Science Fiction;default;
-Jack Sparrow;Disney;Pirate des Caraibes;Pirate des Caraibes;0;default;default;
-Barbossa;Disney;Pirate des Caraibes;Pirate des Caraibes;0;default;default;
-Davy Johnes;Disney;Pirate des Caraibes;Pirate des Caraibes;0;default;default;
-Calypso;Disney;Pirate des Caraibes;Pirate des Caraibes;0;default;default;
-Naruto;Kishimoto;Naruto;Naruto;0;default;default;
-Sasuke;Kishimoto;Naruto;Naruto;0;default;default;
-Kakashi;Kishimoto;Naruto;Naruto;0;default;default;
-Orochimaru;Kishimoto;Naruto;Naruto;0;default;default;
-Luffy;Oda;One Piece;One Piece;0;default;default;
-Zorro;Oda;One Piece;One Piece;0;default;default;
-Nami;Oda;One Piece;One Piece;0;default;default;
-Eusope;Oda;One Piece;One Piece;0;default;default;
-Sandy;Oda;One Piece;One Piece;0;default;default;
-Portal Girl;Valve;Portal;Portal;0;default;default;
-Legolas;Tolkien;The Lord of the Rings;The Lord of the Rings;0;default;default;
-Gimli;Tolkien;The Lord of the Rings;The Lord of the Rings;0;default;default;
-Gandalf;Tolkien;The Lord of the Rings;The Lord of the Rings;0;default;default;
-Sauron;Tolkien;The Lord of the Rings;The Lord of the Rings;0;default;default;
-Saroumane;Tolkien;The Lord of the Rings;The Lord of the Rings;0;default;default;
-Aragorn;Tolkien;The Lord of the Rings;The Lord of the Rings;0;default;default;
-Boromir;Tolkien;The Lord of the Rings;The Lord of the Rings;0;default;default;
-Frodon;Tolkien;The Lord of the Rings;The Lord of the Rings;0;default;default;
-Sam;Tolkien;The Lord of the Rings;The Lord of the Rings;0;default;default;
-Sylvebarbe;Tolkien;The Lord of the Rings;The Lord of the Rings;0;default;default;
-Le Balrog;Tolkien;The Lord of the Rings;The Lord of the Rings;0;default;default;
-Harry Potter;Rowling;Harry Potter;Harry Potter;0;default;default;
-Hermione;Rowling;Harry Potter;Harry Potter;0;default;default;
-Ron;Rowling;Harry Potter;Harry Potter;0;default;default;
-Neuville;Rowling;Harry Potter;Harry Potter;0;default;default;
-Voldemort;Rowling;Harry Potter;Harry Potter;0;default;default;
-Eragon;Paolini;Eragon;Eragon;0;default;default;
-Elsa;Paolini;Eragon;Eragon;0;default;default;
-Monsieur Indestructible;Paolini;Eragon;Eragon;0;default;default;
-Al;Arakawa;Fullmetal Alchemist;Fullmetal Alchemist;0;default;default;
-Ed;Arakawa;Fullmetal Alchemist;Fullmetal Alchemist;0;default;default;
-Wrath;Arakawa;Fullmetal Alchemist;Fullmetal Alchemist;0;default;default;
-Gluttony;Arakawa;Fullmetal Alchemist;Fullmetal Alchemist;0;default;default;
-Lust;Arakawa;Fullmetal Alchemist;Fullmetal Alchemist;0;default;default;
-Hades;Religions;Mythologie grecque;Mythologie grecque;0;default;default;
-Poseidon;Religions;Mythologie grecque;Mythologie grecque;0;default;default;
+ID,Name,Creator,Source,World,Power Level,Tags,
+Elio,,Bottero,
+Nathan,,Bottero,
+Shae,,Bottero,
+Maniel,,Bottero,
+Bjorn,,Bottero,
+Edwin,,Bottero,
+Ellana,,Bottero,
+Ewilan,,Bottero,
+Salim,,Bottero,
+Nawel+Venia,,Bottero,
+Guillemot,,Bottero,
+Qhadear,,Bottero,
+Seigneur Sha,,Bottero,
+FitzChivalry,,Royal Assassine,
+Burrich,,Royal Assassine,
+Lourd,,Royal Assassine,
+Harry Potter,,Harry Potter,
+Hermione Granger,,Harry Potter,
+Ron Weasley,,Harry Potter,
+Neo,,Matrix,
+Trinity,,Matrix,
+Morpheus,,Matrix,
+Asterix,,Asterix,
+Obelix,,Asterix,
+Assurancetourix,,Asterix,
+Link,,Zelda,
+Zelda,,Zelda,
+Ganondorf,,Zelda,
+Xantos,,Zelda,
+Shepard,,Mass Effect,
+Jack,,Mass Effect,
+Miranda,,Mass Effect,
+James,,Mass Effect,
+Joker,,Mass Effect,
+Jacob,,Mass Effect,
+Zaeed,,Mass Effect,
+EDI,,Mass Effect,
+The Doctor,,Doctor Who,
+A Cyberman,,Doctor Who,
+A Dalek,,Doctor Who,
+A Sontaron,,Doctor Who,
+Kendra Sorrenson,,Fablehaven,
+Seth Sorrenson,,Fablehaven,
+Tanu,,Fablehaven,
+Coulter,,Fablehaven,
+Vanessa,,Fablehaven,
+Warren,,Fablehaven,
+Itashi,,Naruto,
+Orochimaru,,Naruto,
+Gaara,,Naruto,
+Artemis Fowl,,Artemis Fowl,
+Butler,,Artemis Fowl,
+Holly shirt,,Artemis Fowl,
+Opal Koboi,,Artemis Fowl,
+Mulch Diggums,,Artemis Fowl,
+Foaly,,Artemis Fowl,
+Violet Parr,,Incredibles,
+Helen Parr,,Incredibles,
+Bob Parr,,Incredibles,
+Dash Parr,,Incredibles,
+Frozone,,Incredibles,
+Syndrome,,Incredibles,
+Heracles,,Fate,
+Shirou,,Fate,
+Gilgamesh,,Fate,
+Kirei Kotomine,,Fate,
+Alexander (Rider),,Fate,
+Cu Chulainn (Lancer),,Fate,
+Bluebeard (Caster),,Fate,
+Percy Jackson,,Percy Jackson,
+Thalia Grace,,Percy Jackson,
+Medusa,,Percy Jackson,
+Radagast,,LotR,
+Gandalf,,LotR,
+Saruman,,LotR,
+Aragorn,,LotR,
+Zeus,,Olympus,
+Poseidon,,Olympus,
+Hades,,Olympus,
+Ares,,Olympus,
+Athena,,Olympus,
+Dyonisos,,Olympus,
+Aphrodite,,Olympus,
+Apollon,,Olympus,
+Demeter,,Olympus,
+Hera,,Olympus,
+Ephaistos,,Olympus,
+Artemis,,Olympus,
+Booker DeWitt,,Bioshock,
+Elizabeth,,Bioshock,
+Delta,,Bioshock,
+Eleanor,,Bioshock,
+Edward Elric,,Fullmetal Alchemist,
+Alphonse Elric,,Fullmetal Alchemist,
+Kimby,,Fullmetal Alchemist,
+Armstrong,,Fullmetal Alchemist,
+Wrath,,Fullmetal Alchemist,
+Glutonny,,Fullmetal Alchemist,
+Lust,,Fullmetal Alchemist,
+Mustang,,Fullmetal Alchemist,
+Pride,,Fullmetal Alchemist,
+Envy,,Fullmetal Alchemist,
+Sloth,,Fullmetal Alchemist,
+Greed,,Fullmetal Alchemist,
+Father,,Fullmetal Alchemist,
+Master Chief,,Halo,
+Cortana,,Halo,
+Sarah Connor,,Terminator,
+T-800,,Terminator,
+T-1000,,Terminator,
+TX,,Terminator,
+Thrall,,Warcraft 3,
+Illidan,,Warcraft 3,
+Arthas,,Warcraft 3,
+Ash,,Pokemons,
+Misty,,Pokemons,
+Brock,,Pokemons,
+Lucas,,Smash Bros,
+Ike,,Smash Bros,
+Samus,,Smash Bros,
+Unarmored Samus,,Smash Bros,
+Shulk,,Smash Bros,
+Villager,,Smash Bros,
+Aang,,Avatar,
+Katara,,Avatar,
+Zuko,,Avatar,
+Ihro,,Avatar,
+Toph,,Avatar,
+Sokka,,Avatar,
+Azula,,Avatar,
+Death,,Apocalypse,
+War,,Apocalypse,
+Pestilence,,Apocalypse,
+Famine,,Apocalypse,
+Captain America,,Marvel,
+Iron Man,,Marvel,
+Spiderman,,Marvel,
+Hawkeye,,Marvel,
+Black Widow,,Marvel,
+Hulk,,Marvel,
+Wolverine,,Marvel,
+Thor,,Marvel,
+Loki,,Marvel,
+Magneto,,Marvel,
+Deadpool,,Marvel,
+Mystic,,Marvel,
+Prof. Xavier,,Marvel,
+Darth Sidious,,Star Wars,
+Obi-One Kenobi,,Star Wars,
+Qui-Gon Jinn,,Star Wars,
+Han Solo,,Star Wars,
+Leia Organa,,Star Wars,
+Genji,,Overwatch,
+McCree,,Overwatch,
+Pharah,,Overwatch,
+Reaper,,Overwatch,
+Bastion,,Overwatch,
+Hanzo,,Overwatch,
+Junkrat,,Overwatch,
+Mei,,Overwatch,
+D.Va,,Overwatch,
+Reinhardt,,Overwatch,
+Roadhog,,Overwatch,
+Winston,,Overwatch,
+Ana,,Overwatch,
+Lucio,,Overwatch,
+Mercy,,Overwatch,
+Symmetra,,Overwatch,
+Soldier 76,,Overwatch,
+Tracer,,Overwatch,
+Torbjorn,,Overwatch,
+Widowmaker,,Overwatch,
+Zarya,,Overwatch,
+Zenyatta,,Overwatch,
+Alucard,,Hellsing,
+Walter C Dorneaz,,Hellsing,
+Alexander Anderson,,Hellsing,
+Celas Victoria,,Hellsing,
+James Bond,,Other,
+Maxine Caulfield,,Other,
+Indiana Jones,,Other,
+Elsa,,Other,
+Little Red Hood,,Other,
+Kira,,Other,
+Lovecraft,,Other,
+Inspector Gadget,,Other,
+Portal Girl,,Other,
+Gordon Freeman,,Other,
+Lelouch De Britania,,Other,
+Dovahkiin,,Other,
+Corvo,,Other,
+Frankeinstein's creature,,Other,
+Rayman,,Other,
+The Kid,,Other,
+Rambo,,Other,
+Jack Sparrow,,Pirates of the Caribbeans,
+Davy Jones,,Pirates of the Caribbeans,
+Barbossa,,Pirates of the Caribbeans,
+Calypso,,Pirates of the Caribbeans,
+Galloran,,Beyonders,
+Farfalee,,Beyonders,
+Jasher,,Beyonders,
+Nedwin,,Beyonders,
+Jason,,Beyonders,
+Ferrin,,Beyonders,
+Rachel,,Beyonders,
+Adam,,Beyonders,
+Dracula,,Dracula,
+Mina Murray,,Dracula,
+The Devil,,Hell,
+Lilith,,Hell,
+Annie,,League of Legends,
+Jinx,,League of Legends,
+Yasuo,,League of Legends,
+Mundo,,League of Legends,
+Veigar,,League of Legends,
+Evelynn,,League of Legends,
+Jim Raynors,,Starcraft 2,
+Sarah Kerrigan,,Starcraft 2,
+Tychus Findlay,,Starcraft 2,
+Nova,,Starcraft 2,
+Gabriel Tosh,,Starcraft 2,
+Zeratul,,Starcraft 2,
+Artanis,,Starcraft 2,
