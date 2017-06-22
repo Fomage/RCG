@@ -9,7 +9,10 @@ Python 3 or higher.
 `ColiseeMain.py`: contains the code
 
 ## Usage
+### Play with local files
 Run ColiseeMain.py
+### Generate a standalone python script
+Run generate.py, the generated script is named RCG.py
 
 ## Rules of the Colisée game
 Là flemme il est tard une autre fois ++
