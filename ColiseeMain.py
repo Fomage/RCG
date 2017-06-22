@@ -1,5 +1,4 @@
-# -*-coding:Latin-1 -*
-
+#------Imports------
 import os
 #currentDirectory = os.path.dirname(__file__)
 #os.chdir("C:/Users/Zen/Documents/Progra/Python/Colisee")
@@ -78,25 +77,23 @@ class Player:
 			print(self.character)
 		return res
 
-#--------INIT--------------
-characterList = []
-# Load every Characters :
-
-with open("characters.csv") as charactersCsvFile:
-	characterReader = csv.reader(charactersCsvFile)
-	firstRow = True
-	for row in characterReader:
-		print row
-		if firstRow:
-			firstRow = False
-		else:
-			if(len(row) > 5):
-				row[5] = row[5:]
+#--------Characters Loading--------------
+def loadCharacters(filePath):
+	with open("characters.csv") as charactersCsvFile:
+		res = []
+		characterReader = csv.reader(charactersCsvFile)
+		firstRow = True
+		for row in characterReader:
+			if firstRow:
+				firstRow = False
 			else:
-				while len(row) <= 5:
-					row.append(None)
-			characterList.append(Character(*row))
-	print len(characterList)
+				if(len(row) > 5):
+					row[5] = row[5:]
+				else:
+					while len(row) <= 5:
+						row.append(None)
+				res.append(Character(*row))
+		return res
 
 #--------FUNCTIONS--------------
 
@@ -153,42 +150,48 @@ def modesEnum(modeName):
 	'': ,}
 '''
 
+#-------PrePlay Module---------
+
+# load characters
+if __name__ == "__main__":
+	characterList = loadCharacters("characters.csv")
+
 #-------Play Module-------
-# input constants
-no = "no"
+if __name__ == "__main__":
+	# input constants
+	no = "no"
 
+	# gameMode = input("Choose gamemode:\n0:default\n1:tagged\n2:world\n3:power")
 
-# gameMode = input("Choose gamemode:\n0:default\n1:tagged\n2:world\n3:power")
+	# Character list selection
+	Player.defaultCharacterSublist = characterList
 
-# Character list selection
-Player.defaultCharacterSublist = characterList
+	while True:
+		# character list reset
+		resetCharacterList(characterList)
 
-while True:
-	# character list reset
-	resetCharacterList(characterList)
+		# Player number selection
+		nbPlayers = int(input("How many Players?"))
+		players = []
+		Player.currentPlayerId = 0
+		for i in range(0, nbPlayers):
+			players.append(Player(characterList))
 
-	# Player number selection
-	nbPlayers = int(input("How many Players?"))
-	players = []
-	Player.currentPlayerId = 0
-	for i in range(0, nbPlayers):
-		players.append(Player(characterList))
-
-	# Repicks
-	repickAnswer = input("Repick ? ")
-	while repickAnswer != no:
-		if int(repickAnswer) < 0: # repick all
-			resetCharacterList(characterList)
-			for p in players:
-				p.repick()
-			for p in players:
-				print(p)
-		else: # repick one
-			repickAnswer = int(repickAnswer) % len(players)
-			players[repickAnswer].repick()
-			for p in players :
-				print(p)
+		# Repicks
 		repickAnswer = input("Repick ? ")
+		while repickAnswer != no:
+			if int(repickAnswer) < 0: # repick all
+				resetCharacterList(characterList)
+				for p in players:
+					p.repick()
+				for p in players:
+					print(p)
+			else: # repick one
+				repickAnswer = int(repickAnswer) % len(players)
+				players[repickAnswer].repick()
+				for p in players :
+					print(p)
+			repickAnswer = input("Repick ? ")
 
 
 
