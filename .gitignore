@@ -1,3 +1,4 @@
 RCG.py
-.DS_Store
+**/.DS_Store
 txtToCsv.py
+**/*.pyc
