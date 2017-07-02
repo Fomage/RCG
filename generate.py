@@ -49,7 +49,7 @@ content = ""
 blocks = parseMainFile("ColiseeMain.py")
 
 # imports
-content += blocks["Imports"]
+content += "import random\n"
 
 # class definitions
 content += blocks["Class definitions"]
