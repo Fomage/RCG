@@ -11,7 +11,7 @@ Python 3 or higher.
 ## Usage
 ### Play with local files
 Run ColiseeMain.py
-1. to reroll a player's character, enter the player's number
+1. to reroll a player's character, enter the player's number.
 For instance: `0`
 1. to reroll all characters, enter -1
 1. to switch the characters of two players, enter the player numbers separated by a space.
